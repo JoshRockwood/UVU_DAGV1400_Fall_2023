@@ -29,3 +29,40 @@ namespace MyApplication
      }
   }
 }
+
+using System;
+
+namespace MyApplication
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      int x = 100 + 50;
+      Console.WriteLine(x); // writes variable x as 150 due to equation
+      
+      int y = x * 2;
+      Console.WriteLine(y); // writes variable y as 200 due to being multiplied by 2
+      
+      int z = y / x;
+      Console.WriteLine(z); // writes variable z as 2 due to 300 being divided by 150
+      
+      int xy = y % x;
+      Console.WriteLine(xy); // writes 0 as the division remainder of 300 and 150 is 0
+      
+      int t = 206;
+      t++;
+      Console.WriteLine(t); // writes 207 as ++ gives an increment of 1 to 206
+      
+      int xz = 5679;
+      xz--;
+      Console.WriteLine(xz); // writes 5678 as -- gives a decrement of 1 to 5679
+      
+      x += 50;
+      Console.WriteLine(x); // writes 200 as 50 is added to the inital x variable of 150
+      
+      x /= 50;
+      Console.WriteLine(x); // writes 4 as current x variable of 200 is divided by 50
+     }
+  }
+}
