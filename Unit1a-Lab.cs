@@ -63,6 +63,16 @@ namespace MyApplication
       
       x /= 50;
       Console.WriteLine(x); // writes 4 as current x variable of 200 is divided by 50
-     }
+      
+      int b = 5;
+      int a = 7; 
+      Console.WriteLine(x != y); // returns True because 5 is not equal to 7
+      
+      int ab = 2;
+      int bc = 2;
+      int cd = 1;
+      Console.WriteLine(ab >= bc); // returns True because 2 is equal to 2
+      Console.WriteLine(bc >= cd); // returns True because 2 is greater than 1
+      }
   }
 }
