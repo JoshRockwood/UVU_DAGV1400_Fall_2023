@@ -73,6 +73,15 @@ namespace MyApplication
       int cd = 1;
       Console.WriteLine(ab >= bc); // returns True because 2 is equal to 2
       Console.WriteLine(bc >= cd); // returns True because 2 is greater than 1
+      
+      int f = 3;
+      Console.WriteLine(f < 5 && f > 10); // returns False because 3 is not greater than 10
+      
+      int g = 7;
+      Console.WriteLine(g < 4 || g < 10); // returns True because one condition of the conditions is True (7 is less than 10 but not less than 4)
+      
+      int u = 2;
+      Console.WriteLine(! (u > 0 && u < 5)); // returns False because ! (not) is used to reverse the expected True result
       }
   }
 }
