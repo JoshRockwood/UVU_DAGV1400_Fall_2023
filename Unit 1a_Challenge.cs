@@ -46,7 +46,7 @@ public class Program
 		hunter.experience += 0.02f;
 		warlock.experience += 0.02f;
 		
-		Console.WriteLine("\n\nEnemy Defeated");
+		Console.WriteLine("\n\n*Enemy Defeated*");
 		Console.WriteLine("\nTitan Exp:" + titan.experience);
 		Console.WriteLine("Hunter Exp:" + hunter.experience);
 		Console.WriteLine("Warlock Exp:" + warlock.experience);
