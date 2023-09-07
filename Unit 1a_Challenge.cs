@@ -2,16 +2,19 @@ using System;
 					
 public class Program
 {
-	public DestinyClass titan;
+	// Created new classes
+	public DestinyClass titan; 
 	public DestinyClass hunter;
 	public DestinyClass warlock;
 	
 	public void Main()
 	{
+		// Created instance of classes
 		titan = new DestinyClass();
 		hunter = new DestinyClass();
 		warlock = new DestinyClass();
 			
+		// Setting the values of classes
 		titan.type = "Titan";
 		hunter.type = "Hunter";
 		warlock.type = "Warlock";
@@ -24,6 +27,7 @@ public class Program
 		hunter.experience = 8.23f;
 		warlock.experience = 3.56f;
 		
+		// Displayed stats on Console
 		Console.WriteLine("Destiny Class\n");
 		Console.WriteLine(titan.type);
 		Console.WriteLine("Light Level:" + titan.lightLevel);
@@ -36,9 +40,20 @@ public class Program
 		Console.WriteLine("\n" + warlock.type);
 		Console.WriteLine("Light Level:" + warlock.lightLevel);
 		Console.WriteLine("Exp:" + warlock.experience);
+		
+		// Killed an enemy and gained experience
+		titan.experience += 0.02f;
+		hunter.experience += 0.02f;
+		warlock.experience += 0.02f;
+		
+		Console.WriteLine("\n\nEnemy Defeated");
+		Console.WriteLine("\nTitan Exp:" + titan.experience);
+		Console.WriteLine("Hunter Exp:" + hunter.experience);
+		Console.WriteLine("Warlock Exp:" + warlock.experience);
 	}
 }
 
+// Defined Destiny Class
 public class DestinyClass
 {
 	public string type;
