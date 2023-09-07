@@ -50,6 +50,19 @@ public class Program
 		Console.WriteLine("\nTitan Exp:" + titan.experience);
 		Console.WriteLine("Hunter Exp:" + hunter.experience);
 		Console.WriteLine("Warlock Exp:" + warlock.experience);
+		
+		// Created a way to name your Guardian
+		Console.WriteLine("\nWhat would you like to name your Titan?");
+		titan.name = Console.ReadLine();
+		Console.WriteLine("\nYou named your Titan: " + titan.name);
+		
+		Console.WriteLine("\nWhat would you like to name your Hunter?");
+		hunter.name = Console.ReadLine();
+		Console.WriteLine("\nYou named your Hunter: " + hunter.name);
+		
+		Console.WriteLine("\nWhat would you like to name your Warlock?");
+		warlock.name = Console.ReadLine();
+		Console.WriteLine("\nYou named your Warlock: " + warlock.name);
 	}
 }
 
@@ -59,4 +72,5 @@ public class DestinyClass
 	public string type;
 	public int lightLevel = 1830;
 	public float experience = 9.75f;
+	public string name; // Added name variable
 }
