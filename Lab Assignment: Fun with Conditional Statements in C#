@@ -47,3 +47,26 @@ public class Program
 		}
 	}
 }
+
+//Else if statement practice
+using System;
+
+public class Program
+{
+	public void Main ()
+	{
+	int x = 72;
+		if (x <= 100)
+		{
+			Console.WriteLine("Full");
+		}
+		else if (x > 75)
+		{
+			Console.WriteLine("Almost Full");	
+		}	
+		else 
+		{
+			Console.WriteLine("Empty");
+		}
+	}
+}
