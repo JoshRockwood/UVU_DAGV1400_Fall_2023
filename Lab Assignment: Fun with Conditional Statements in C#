@@ -1,1 +1,29 @@
+// Test variable practice
+using System;
+					
+public class Program
+{
+	public void Main()
+	{	
+		int x = 32;
+		int y = 24;
+		if (x > y)
+		{
+			Console.WriteLine("True, x is greater than y.");
+		}
+	}
+}
 
+// If statement practice
+using System;
+					
+public class Program
+{
+	public void Main()
+	{	
+		if (56 < 102)
+		{
+			Console.WriteLine("True, 56 is less than 102.");
+		}
+	}
+}
