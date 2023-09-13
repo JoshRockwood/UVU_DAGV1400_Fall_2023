@@ -125,3 +125,30 @@ public class Program
 		}
 	}
 }
+
+// Challenge #1
+using System;
+					
+public class Program
+{
+	public void Main()
+	{
+		Console.WriteLine("How hot is it outside?");
+		Console.WriteLine("\nWhat is the temperature in Celcius?");
+		if (double.TryParse(Console.ReadLine(), out double temperature))
+		{
+			if (temperature > 30)
+			{
+				Console.WriteLine("I suggest you stay hydrated and out of the sun for long periods of time!");
+			}
+			else
+			{
+				Console.WriteLine("Enjoy the nice weather!");		
+			}
+		}	
+		else
+		{
+			Console.WriteLine("Input a valid temperature.");
+		}
+	}	
+}
