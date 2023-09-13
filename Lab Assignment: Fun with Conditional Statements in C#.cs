@@ -96,3 +96,32 @@ public class Program
 		}
 	}
 }
+
+// Default practice
+using System;
+					
+public class Program
+{
+	public void Main()
+	{
+		int directions = 5;
+		switch (directions)
+		{
+			case 1:
+				Console.WriteLine("North");
+				break;
+			case 2:
+				Console.WriteLine("South");
+				break;
+			case 3:
+				Console.WriteLine("West");
+				break;
+			case 4:
+				Console.WriteLine("East");
+				break;
+			default:
+				Console.WriteLine("You are lost");
+				break;
+		}
+	}
+}
