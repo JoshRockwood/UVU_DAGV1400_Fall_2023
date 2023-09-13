@@ -27,3 +27,23 @@ public class Program
 		}
 	}
 }
+
+// Else statement practice
+using System;
+					
+public class Program
+{
+	public void Main()
+	{
+		int x = 75;
+		int y = 25;
+		if (x < y)
+		{
+			Console.WriteLine("True");
+		}
+		else
+		{
+			Console.WriteLine("False");
+		}
+	}
+}
