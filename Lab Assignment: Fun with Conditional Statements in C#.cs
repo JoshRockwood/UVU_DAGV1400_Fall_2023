@@ -155,51 +155,40 @@ public class Program
 
 // Challenge #2
 using System;
-					
+
 public class Program
 {
 	public static void Main()
 	{
+		int score;
 		Console.WriteLine("Please input your score on your test");
-		if (double.TryParse(Console.ReadLine(), out double score))
+		while (!int.TryParse(Console.ReadLine(), out score) || score >= 100 || score < 0)
 		{
-			char grade;
-			
-			if (score >= 90 && score <= 100)
-			{
-				grade = 'A';
-				Console.WriteLine("Your grade is an A!");
-			}
-			else if (score >=80 && score <= 89)
-			{
-				grade = 'B';
-				Console.WriteLine("Your grade is a B");
-			}
-			else if (score >= 70 && score <= 79)
-			{
-				grade = 'C';
-				Console.WriteLine("Your grade is a C");
-			}
-			else if (score >= 60 && score <= 69)
-			{
-				grade = 'D';
-				Console.WriteLine("Your grade is a D");
-			}
-			else if (score >= 0 && score <= 60)
-			{
-				grade = 'F';
-				Console.WriteLine("Your grade is an F");
-			}
-			else
-			{
-				Console.WriteLine("Invalid input. Please enter a valid score between 0 and 100.");
-				return;
-			}
-			Console.WriteLine("Your grade is:" + grade);
+			Console.WriteLine("Please enter a valid score between 0 and 100.");
+		}
+
+		char grade;
+		if (score >= 90)
+		{
+			grade = 'A';
+		}
+		else if (score >= 80)
+		{
+			grade = 'B';
+		}
+		else if (score >= 70)
+		{
+			grade = 'C';
+		}
+		else if (score >= 60)
+		{
+			grade = 'D';
 		}
 		else
 		{
-			Console.WriteLine("Invalid input. Please enter a valid score between 0 and 100.");
+			grade = 'F';
 		}
+
+		Console.WriteLine("Your grade is:" + grade);
 	}
 }
