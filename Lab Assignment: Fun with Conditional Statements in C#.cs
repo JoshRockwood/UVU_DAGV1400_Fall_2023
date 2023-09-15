@@ -162,7 +162,7 @@ public class Program
 	{
 		int score;
 		Console.WriteLine("Please input your score on your test");
-		while (!int.TryParse(Console.ReadLine(), out score) || score >= 100 || score < 0)
+		while (!int.TryParse(Console.ReadLine(), out score) || score > 100 || score < 0)
 		{
 			Console.WriteLine("Please enter a valid score between 0 and 100.");
 		}
