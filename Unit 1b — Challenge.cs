@@ -6,8 +6,8 @@ public class Program
 	public void Main()
 	{
 		Console.WriteLine("What is the temperature outside in Celcius?");
-		int temperature;
-		while (!int.TryParse(Console.ReadLine(), out temperature))
+		float temperature;
+		while (!float.TryParse(Console.ReadLine(), out temperature))
 		{
 			Console.WriteLine("Please enter a valid temperature.");
 		}
