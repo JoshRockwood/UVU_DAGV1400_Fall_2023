@@ -5,6 +5,7 @@ public class Program
 {
 	public void Main()
 	{
+		// Get a valid number from the user
 		Console.WriteLine("What is the temperature outside in Celcius?");
 		float temperature;
 		while (!float.TryParse(Console.ReadLine(), out temperature))
@@ -12,6 +13,7 @@ public class Program
 			Console.WriteLine("Please enter a valid temperature.");
 		}
 
+		// Print a message based on temperature
 		if (temperature >= 30)
 		{
 			Console.WriteLine("Wow that's hot! Stay hydrated and make sure you stay out of the sun for long periods of time!");
@@ -42,6 +44,7 @@ public class Program
 {
 	public static void Main()
 	{
+		// Ask user for last test score
 		int score;
 		Console.WriteLine();
 		Console.WriteLine("Please input your score on your test");
@@ -50,6 +53,7 @@ public class Program
 			Console.WriteLine("Please enter a valid score between 0 and 100.");
 		}
 
+		// Give grade based on test score
 		char grade;
 		if (score >= 90)
 		{
@@ -73,11 +77,13 @@ public class Program
 		}
 
 		Console.WriteLine("Your grade is:" + grade);
-		
+
+		// Ask favorite subject
 		Console.WriteLine();
 		Console.WriteLine("What is your favorite subject between Math, Science, Art, and History.");
 		string subject = Console.ReadLine();
-		
+
+		// Give comment from input
 		Console.WriteLine();
 		switch (subject)
 		{
