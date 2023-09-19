@@ -135,3 +135,19 @@ public class Program
 		}
 	}
 }
+
+// Array.Sort practice
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		string[] justiceLeague = {"Super Man", "Wonder Woman", "Batman", "The Flash", "Aquaman", "Green Lantern", "Cyborg", "Shazam"};
+		Array.Sort(justiceLeague);
+		foreach (string i in justiceLeague)
+		{
+			Console.WriteLine(i);
+		}
+	}
+}
