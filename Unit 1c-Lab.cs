@@ -57,3 +57,18 @@ public class Program
 		}
 	}
 }
+
+// For Each loop practice
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		string[] subClassElements = {"Solar", "Void", "Arc", "Stasis", "Strand"};
+		foreach (string element in subClassElements)
+		{
+			Console.WriteLine(element);
+		}
+	}
+}
