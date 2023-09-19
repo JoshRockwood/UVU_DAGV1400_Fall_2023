@@ -72,3 +72,66 @@ public class Program
 		}
 	}
 }
+
+// Array practice
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		string[] justiceLeague = {"Super Man", "Wonder Woman", "Batman", "The Flash", "Aquaman", "Green Lantern", "Cyborg"};
+		Console.WriteLine(justiceLeague[2]);
+	}
+}
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		string[] justiceLeague = {"Super Man", "Wonder Woman", "Batman", "The Flash", "Aquaman", "Green Lantern", "Cyborg"};
+		justiceLeague[2] = "Nightwing";
+		Console.WriteLine(justiceLeague[2]);
+	}
+}
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		string[] justiceLeague = {"Super Man", "Wonder Woman", "Batman", "The Flash", "Aquaman", "Green Lantern", "Cyborg"};
+		Console.WriteLine(justiceLeague.Length);
+	}
+}
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		string[] justiceLeague = {"Super Man", "Wonder Woman", "Batman", "The Flash", "Aquaman", "Green Lantern", "Cyborg"};
+		for (int members = 0; members < 7; members++)
+		{
+			Console.WriteLine(justiceLeague[members]);
+		}
+	}
+}
+
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		string[] justiceLeague = {"Super Man", "Wonder Woman", "Batman", "The Flash", "Aquaman", "Green Lantern", "Cyborg", "Shazam"};
+		foreach (string i in justiceLeague)
+		{
+			Console.WriteLine(i);
+		}
+	}
+}
