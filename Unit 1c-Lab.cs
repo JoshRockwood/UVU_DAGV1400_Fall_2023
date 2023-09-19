@@ -13,3 +13,20 @@ public class Program
 		}
 	}
 }
+
+// Do while loop practice
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int i = 9;
+		do
+		{
+			Console.WriteLine(i);
+			i++;
+		}
+		while (i < 8);
+	}
+}
