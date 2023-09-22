@@ -44,3 +44,30 @@ public class Program
 		}
 	}
 }
+
+// Challenge #2
+using System;
+
+namespace Challenge2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string[] favoriteFoods = new string[3];
+
+            Console.WriteLine("What are your three favorite foods?");
+            for (var i = 0; i < favoriteFoods.Length; i++)
+            {
+                Console.Write((i + 1) + ". ");
+                string favoriteFood = Console.ReadLine();
+                favoriteFoods[i] = favoriteFood;
+            }
+            
+            foreach (string favoriteFood in favoriteFoods)
+            {
+                Console.WriteLine("I love " + favoriteFood + "!");
+            }
+        }
+    }
+}
