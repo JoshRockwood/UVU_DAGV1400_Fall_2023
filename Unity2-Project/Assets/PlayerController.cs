@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
             moveDirection = transform.TransformDirection(new Vector3(horizontalInput, 0, verticalInput));
             moveDirection *= currentSpeed;
 
+            //Jump mechanic
             if (Input.GetButtonDown("Jump"))
             {
                 moveDirection.y = jumpForce;
