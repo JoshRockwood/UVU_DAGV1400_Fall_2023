@@ -22,6 +22,8 @@
 *.sln.meta
 *.vssscc
 *.csproj.vspscc
+*.mov 
+*.avi
 
 # Build results
 [Bb]uild [Bb]uild*
@@ -61,3 +63,5 @@
 *.unityproj
 *.sln
 *.sln.meta
+*.mov
+*.avi
