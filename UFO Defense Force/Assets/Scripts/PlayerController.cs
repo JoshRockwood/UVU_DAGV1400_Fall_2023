@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float xRange;
     public Transform blaster;
     public GameObject laserBolt;
+    private int inventory; // Player's inventory
     // Start is called before the first frame update
 
     // Update is called once per frame
@@ -36,7 +37,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //Creates laser at blaster position and maintains laser rotation
-            Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation);
+            Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation);   
         }
     }
 
@@ -44,5 +45,11 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEvent(Collider other)
     {
         Destroy(other.gameObject);
+    }
+
+    public void CollectItem(int value)
+    {
+        inventory += value;
+        Debug.Log("You have a " + inventory);
     }
 }
