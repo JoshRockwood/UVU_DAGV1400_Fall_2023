@@ -41,12 +41,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    // Destroy gameObject that touches Player
-    private void OnTriggerEvent(Collider other)
-    {
-        Destroy(other.gameObject);
-    }
-
+    // Collects the powerup
     public void CollectItem(int value)
     {
         inventory += value;

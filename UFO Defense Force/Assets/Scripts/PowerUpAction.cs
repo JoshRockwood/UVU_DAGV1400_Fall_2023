@@ -8,7 +8,6 @@ public class PowerUpAction : MonoBehaviour
     public UnityEvent onCollisionEvent;
     public int value = 1; // Value of the pickup
 
-
     // Trigger event
     private void OnTriggerEnter(Collider other)
     {
