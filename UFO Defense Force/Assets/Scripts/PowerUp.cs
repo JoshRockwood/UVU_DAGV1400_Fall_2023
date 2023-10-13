@@ -7,17 +7,23 @@ public class SpawnPowerUp : MonoBehaviour
 {
     public GameObject powerUp;
     public Transform spawner;
+    private float startDelay = 5.0f;
+    private float spawnInterval = 5.0f;
+    private float spawnRangeX =  25.0f;
+    private float spawnPositionZ = 25.0f; 
 
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(CreatePowerUp());
+        // Spawn powerup with delay
+        InvokeRepeating("CreatePowerUp", startDelay, spawnInterval);
     }
 
-    // Set up a spawn time
-    IEnumerator CreatePowerUp()
+    void CreatePowerUp()
     {
-        yield return new WaitForSeconds(5); // Define how many sec. to wait
-        Instantiate(powerUp, spawner.transform.position, powerUp.transform.rotation); // Spawn in powerUp
+        // Creates power up with random x-axis variable
+        Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 1.3f, spawnPositionZ);
+        // Instantiates powerup
+        Instantiate(powerUp, spawnPos, powerUp.transform.rotation);
     }
 }
