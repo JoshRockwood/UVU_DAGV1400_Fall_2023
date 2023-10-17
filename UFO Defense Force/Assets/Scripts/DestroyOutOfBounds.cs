@@ -6,10 +6,16 @@ public class DestroyOutOfBounds : MonoBehaviour
 {
     public float topBound;
     public float lowBound;
+    private GameManager gameManager;
     void Awake()
     {
         // Reset time scale
         Time.timeScale = 1;
+    }
+
+    void Start()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
     // Update is called once per frame
     void Update()
@@ -21,8 +27,8 @@ public class DestroyOutOfBounds : MonoBehaviour
         }
         else if (transform.position.z < lowBound)
         {
-            Debug.Log ("Game Over!");
             Destroy(gameObject);
+            gameManager.isGameOver = true;
             Time.timeScale = 0;
         }
     }
