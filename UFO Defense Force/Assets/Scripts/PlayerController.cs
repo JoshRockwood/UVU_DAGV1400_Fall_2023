@@ -9,8 +9,6 @@ public class PlayerController : MonoBehaviour
     public float xRange;
     public Transform blaster;
     public GameObject laserBolt;
-    private int inventory; // Player's inventory
-    private int score = 0;
     // Start is called before the first frame update
 
     // Update is called once per frame
@@ -40,12 +38,5 @@ public class PlayerController : MonoBehaviour
             //Creates laser at blaster position and maintains laser rotation
             Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation);   
         }
-    }
-
-    // Collects the powerup
-    public void CollectItem(int itemValue)
-    {
-        score += itemValue;
-        Debug.Log("Collected " + itemValue + " points!\n Total Score: " + score);
     }
 }

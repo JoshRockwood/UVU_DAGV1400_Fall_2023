@@ -5,24 +5,30 @@ using UnityEngine.Events;
 
 public class PowerUpAction : MonoBehaviour
 {
-    public UnityEvent onCollisionEvent;
+    // public UnityEvent onCollisionEvent;
     public int value; // Value of the pickup
     public float lowBound;
+    private ScoreManager scoreManager;
+
+    void Start()
+    {
+        scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+    }
 
     // Trigger event
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter(Collider collision)
     {
         // Check if collide with player
         if (collision.gameObject.CompareTag("Player"))
         {
-            onCollisionEvent.Invoke();
+            // onCollisionEvent.Invoke();
 
             PlayerController player = collision.gameObject.GetComponent<PlayerController>(); // Access player controller script
 
             if (player != null)
             {
-                player.CollectItem(value); // Collect the powerup
                 Destroy(gameObject); // Destroys powerup upon contact with player
+                scoreManager.IncreaseScore(value);
             }
         }
     }
