@@ -9,7 +9,14 @@ public class PlayerController : MonoBehaviour
     public float xRange;
     public Transform blaster;
     public GameObject laserBolt;
+
+    public GameManager gameManager;
+
     // Start is called before the first frame update
+    void Start()
+    {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>(); // Reference to Game Manager
+    }
 
     // Update is called once per frame
     void Update()
@@ -32,8 +39,8 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
 
-        // Gets space input from keyboard and assigns it to create laser
-        if (Input.GetKeyDown(KeyCode.Space))
+        // Gets space input from keyboard and assigns it to create laser. Second condition requires isGameOver to be false
+        if (Input.GetKeyDown(KeyCode.Space) && gameManager.isGameOver == false) 
         {
             //Creates laser at blaster position and maintains laser rotation
             Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation);   
