@@ -7,6 +7,7 @@ public class DestroyOutOfBounds : MonoBehaviour
     public float topBound;
     public float lowBound;
     private GameManager gameManager;
+    private PlayAudio playAudio;
     void Awake()
     {
         // Reset time scale
@@ -16,6 +17,8 @@ public class DestroyOutOfBounds : MonoBehaviour
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        // Reference AudioSource game object
+        playAudio = GameObject.Find("AudioSource").GetComponent<PlayAudio>();
     }
     // Update is called once per frame
     void Update()
@@ -30,6 +33,12 @@ public class DestroyOutOfBounds : MonoBehaviour
             Destroy(gameObject);
             gameManager.isGameOver = true;
             Time.timeScale = 0;
+
+            // Play Game over sound effect
+            if (playAudio != null)
+            {
+                playAudio.endGame();
+            }
         }
     }
 }

@@ -11,11 +11,13 @@ public class PlayerController : MonoBehaviour
     public GameObject laserBolt;
 
     public GameManager gameManager;
+    private PlayAudio playAudio;
 
     // Start is called before the first frame update
     void Start()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>(); // Reference to Game Manager
+        playAudio = GameObject.Find("AudioSource").GetComponent<PlayAudio>(); // Reference to Audio Source
     }
 
     // Update is called once per frame
@@ -43,7 +45,13 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && gameManager.isGameOver == false) 
         {
             //Creates laser at blaster position and maintains laser rotation
-            Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation);   
+            Instantiate(laserBolt, blaster.transform.position, laserBolt.transform.rotation);  
+
+            // Play laser bolt sound effect
+            if (playAudio != null)
+            {
+                playAudio.laserBolt();
+            } 
         }
     }
 }

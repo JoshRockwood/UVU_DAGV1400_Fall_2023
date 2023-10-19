@@ -9,10 +9,13 @@ public class PowerUpAction : MonoBehaviour
     public int value; // Value of the pickup
     public float lowBound;
     private ScoreManager scoreManager;
+    private PlayAudio playAudio;
 
     void Start()
     {
         scoreManager = GameObject.Find("ScoreManager").GetComponent<ScoreManager>();
+        // Reference AudioSource game object
+        playAudio = GameObject.Find("AudioSource").GetComponent<PlayAudio>();
     }
 
     // Trigger event
@@ -29,6 +32,11 @@ public class PowerUpAction : MonoBehaviour
             {
                 Destroy(gameObject); // Destroys powerup upon contact with player
                 scoreManager.IncreaseScore(value);
+
+                if (playAudio != null)
+                {
+                    playAudio.Upgrade();
+                }
             }
         }
     }
