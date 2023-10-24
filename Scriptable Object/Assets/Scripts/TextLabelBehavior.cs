@@ -8,6 +8,7 @@ public class TextLabelBehavior : MonoBehaviour
 {
     public TextMeshProUGUI label;
     public FloatData dataObj;
+    public IntData dataNum;
 
     private void Start()
     {
