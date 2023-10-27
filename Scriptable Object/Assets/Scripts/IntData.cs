@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class IntData : ScriptableObject
 {
-    public int gold;
+    public int value;
 
-    public void UpdateValue(int amount)
+    public void UpdateValue(int num)
     {
-        gold += amount;
+        value += num;
     }
 }
