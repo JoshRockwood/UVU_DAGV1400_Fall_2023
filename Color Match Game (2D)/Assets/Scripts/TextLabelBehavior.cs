@@ -9,6 +9,7 @@ public class TextLabelBehavior : MonoBehaviour
 {
     private TextMeshProUGUI label;
     public UnityEvent startEvent;
+
     private void Start()
     {
         label = GetComponent<TextMeshProUGUI>();
