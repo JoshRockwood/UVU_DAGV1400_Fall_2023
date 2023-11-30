@@ -263,6 +263,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2513107462249134353, guid: ce7a51d958b627b448de2a25f5ac50b4, type: 3}
+      propertyPath: seconds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2513107462249134353, guid: ce7a51d958b627b448de2a25f5ac50b4, type: 3}
+      propertyPath: counterNum
+      value: 
+      objectReference: {fileID: 11400000, guid: f97955cd0828b6d4a9e8c9b7c3fb7fb2, type: 2}
     - target: {fileID: 7453842412716218808, guid: ce7a51d958b627b448de2a25f5ac50b4, type: 3}
       propertyPath: m_Name
       value: InstancerGO
